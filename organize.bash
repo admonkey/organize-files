@@ -9,7 +9,7 @@ shopt -s nocaseglob
 
 # iterate through array of folders
 for folder in ${folders[*]}; do
-	# group same name files into folders
+	# group same name files into folders without overwriting
 	# FIX error moving folder into itself
-	mv -n $folder* $folder/
+	mv -vn $folder* $folder/
 done
