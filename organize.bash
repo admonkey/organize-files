@@ -1,8 +1,10 @@
 #!/bin/bash
 # collect files into sorted folders
 
-array=($(ls -d */|sed 's|[/]||g'))
+# get list of folders in current directory without trailing slash
+folders=(  $( ls -d */ | sed 's|[/]||g' )  )
 
-for folder in ${array[*]}; do
+# iterate through array of folders
+for folder in ${folders[*]}; do
 	echo $folder
 done
