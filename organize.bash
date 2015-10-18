@@ -6,5 +6,7 @@ folders=(  $( ls -d */ | sed 's|[/]||g' )  )
 
 # iterate through array of folders
 for folder in ${folders[*]}; do
-	echo $folder
+	# group same name files into folders
+	# FIX error moving folder into itself
+	mv -n $folder* $folder/
 done
