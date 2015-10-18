@@ -11,5 +11,5 @@ shopt -s nocaseglob
 for folder in ${folders[*]}; do
 	# group same name files into folders without overwriting
 	# FIX error moving folder into itself
-	mv -vn $folder* $folder/
+	mv -vn $folder* $folder/ 2>&1 | grep -v "to a subdirectory of itself"
 done
