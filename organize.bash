@@ -3,4 +3,6 @@
 
 array=($(ls -d */))
 
-echo $array
+for folder in ${array[*]}; do
+	echo $folder
+done
