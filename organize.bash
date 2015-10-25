@@ -26,4 +26,5 @@ for folder in ${folders[*]}; do
 		rm temp
 	fi
 
+	mv -vn $folder* $folder/ 2>&1 | grep -v "to a subdirectory of itself"
 done
